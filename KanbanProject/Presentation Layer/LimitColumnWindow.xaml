@@ -1,0 +1,104 @@
+﻿<Window x:Class="KanbanProject.Presentation_Layer.LimitColumnWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KanbanProject.Presentation_Layer"
+        mc:Ignorable="d"
+        Title="LimitColumnWindow" Height="578.462" Width="1074.231">
+    <Window.Background>
+        <ImageBrush ImageSource="/KanbanProject;component/Images/BoardBackground.png"/>
+    </Window.Background>
+    <Grid Margin="10,0,2,7">
+        <Label Content="Limit Column" FontSize="50" FontStyle="Italic" Background="Transparent" Foreground="BlanchedAlmond"  FontWeight="ExtraBold" HorizontalAlignment="Center" Margin="59,35,245,0" VerticalAlignment="Top"  Height="80" Width="750">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Label.Effect>
+        </Label>
+        <TextBox Name="colNameBox"
+                 HorizontalAlignment="Left"
+                 Text="{Binding NameOfColumn}"
+                 Margin="338,146,0,0" 
+                 TextWrapping="Wrap"
+                 FontSize="20"
+                 FontStyle="Italic"
+                 Foreground="Black"
+                 FontWeight="Medium"
+                 VerticalContentAlignment="Center" 
+                 VerticalAlignment="Top"
+                 Height="60" Width="380"/>
+        <TextBox Name="numOfTask"
+                 HorizontalAlignment="Left"
+                 Text="{Binding Tasks}"
+                 Margin="338,271,0,0" 
+                 VerticalAlignment="Top"
+                 FontSize="20"
+                 FontStyle="Italic"
+                 Foreground="Black"
+                 FontWeight="Medium"
+                 VerticalContentAlignment="Center"
+                 Height="60" Width="380"/>
+        <Label Content="Column's Name"
+               FontStyle="Italic"
+               Foreground="BlanchedAlmond"
+               FontWeight="Bold"
+               FontSize="30" 
+               HorizontalAlignment="Left"
+               Margin="59,146,0,0"
+               VerticalAlignment="Top" 
+               Height="60" Width="121">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Limiting Number"
+                FontStyle="Italic"
+               Foreground="BlanchedAlmond"
+               FontWeight="Bold"
+               FontSize="30"
+               HorizontalAlignment="Left"
+               Margin="59,279,0,0" 
+               VerticalAlignment="Top"
+               Width="251">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Label.Effect>
+        </Label>
+        <Button Name="limitButton"
+                Content="Limit"
+                Click="limit_Click"
+                FontStyle="Italic"
+                BorderThickness="4"
+                BorderBrush="AntiqueWhite"
+                Foreground="BlanchedAlmond"
+                Background="Transparent"
+                FontWeight="Bold"
+                FontSize="38"
+                HorizontalAlignment="Left"
+                Margin="262,400,0,0"
+                VerticalAlignment="Top"
+                Width="200">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button Name="returnButton"
+                Content="Return"
+                FontStyle="Italic"
+                BorderThickness="4"
+                BorderBrush="AntiqueWhite"
+                Foreground="BlanchedAlmond"
+                Background="Transparent"
+                FontWeight="Bold"
+                FontSize="38"
+                Click="return_Click"
+                HorizontalAlignment="Left"
+                Margin="637,400,0,0"
+                VerticalAlignment="Top"
+                Width="200">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>

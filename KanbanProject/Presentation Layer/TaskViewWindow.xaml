@@ -1,0 +1,133 @@
+﻿<Window x:Class="KanbanProject.Presentation_Layer.TaskViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KanbanProject.Presentation_Layer"
+        mc:Ignorable="d"
+        Title="TaskViewWindow" Height="578.462" Width="1074.231">
+    <Window.Background>
+        <ImageBrush ImageSource="/KanbanProject;component/Images/BoardBackground.png"/>
+    </Window.Background>
+    <Grid Margin="10,0,2,7">
+        <Label Content="View Task Details" FontSize="50" FontStyle="Italic" Background="Transparent" Foreground="BlanchedAlmond"  FontWeight="ExtraBold" HorizontalAlignment="Center" Margin="98,34,206,0" VerticalAlignment="Top"  Height="80" Width="750">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Task ID"
+               FontStyle="Italic"
+               Foreground="BlanchedAlmond"
+               FontWeight="Bold"
+               FontSize="30"
+               HorizontalAlignment="Left"
+               Margin="643,152,0,0"
+               VerticalAlignment="Top"
+               Height="60" Width="136">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Label.Effect>
+        </Label>
+        <TextBox HorizontalAlignment="Left"
+                 Text="{Binding TaskID}" 
+                 Margin="784,152,0,0"
+                 TextWrapping="Wrap"
+                  FontSize="20"
+                 FontStyle="Italic"
+                 Foreground="Black"
+                 FontWeight="Medium"
+                 VerticalAlignment="Top"
+                 VerticalContentAlignment="Center"
+                 Height="60" Width="126"/>
+        <Button Content="Show"
+                FontStyle="Italic"
+                BorderThickness="4"
+                BorderBrush="AntiqueWhite"
+                Foreground="BlanchedAlmond"
+                Background="Transparent"
+                FontWeight="Bold"
+                FontSize="38"
+                Click="Show_click"
+                HorizontalAlignment="Left"
+                Margin="643,226,0,0"
+                VerticalAlignment="Top"
+                Width="267" Height="58">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <TextBlock HorizontalAlignment="Left"
+                   Name="creationTime"
+                   FontStyle="Italic"
+                   Foreground="BlanchedAlmond"
+                   FontWeight="Bold"
+                   FontSize="30" 
+                   Margin="95,142,0,0"
+                   TextWrapping="Wrap"
+                   Text="Creation Time"
+                   VerticalAlignment="Top"
+                   Height="50" Width="188" RenderTransformOrigin="0.505,-0.32">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left"
+                   Name="title"
+                   FontStyle="Italic"
+                   Foreground="BlanchedAlmond"
+                   FontWeight="Bold"
+                   FontSize="20" 
+                   Margin="95,224,0,0"
+                   TextWrapping="Wrap"
+                   Text="Title" 
+                   VerticalAlignment="Top"
+                   Height="50" Width="450"/>
+        <TextBlock HorizontalAlignment="Left"
+                   Name="description"
+                   FontStyle="Italic"
+                   Foreground="BlanchedAlmond"
+                   FontWeight="Bold"
+                   FontSize="18" 
+                   Margin="95,297,0,0"
+                   TextWrapping="Wrap"
+                   Text="Description"
+                   VerticalAlignment="Top"
+                   Height="100" Width="450">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left"
+                   Name="dueDate"
+                   FontStyle="Italic"
+                   Foreground="BlanchedAlmond"
+                   FontWeight="Bold"
+                   FontSize="30"
+                   Margin="95,411,0,0"
+                   TextWrapping="Wrap"
+                   Text="Due Date"
+                   VerticalAlignment="Top"
+                   Height="50" Width="188">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Button Content="Return"
+                Click="Return_click"
+                FontStyle="Italic"
+                BorderThickness="4"
+                BorderBrush="AntiqueWhite"
+                Foreground="BlanchedAlmond"
+                Background="Transparent"
+                FontWeight="Bold"
+                FontSize="38"
+                HorizontalAlignment="Left"
+                Margin="643,400,0,0"
+                VerticalAlignment="Top"
+                Width="267">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>

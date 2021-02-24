@@ -1,0 +1,139 @@
+﻿<Window x:Class="KanbanProject.Presentation_Layer.ChangeTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KanbanProject.Presentation_Layer"
+        mc:Ignorable="d"
+        Title="ChangeTaskWindow" Height="578.462" Width="1074.231">
+    <Window.Background>
+        <ImageBrush ImageSource="/KanbanProject;component/Images/BoardBackground.png"/>
+    </Window.Background>
+    <Grid Margin="10,0,2,7">
+        <Label Content="Change Task Details" FontSize="50" FontStyle="Italic" Background="Transparent" Foreground="BlanchedAlmond"  FontWeight="ExtraBold" HorizontalAlignment="Center" Margin="54,35,234,0" VerticalAlignment="Top"  Height="80" Width="766">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Label.Effect>
+        </Label>
+        <TextBox HorizontalAlignment="Left"
+                 Text="{Binding TaskData}" 
+                 Margin="270,271,0,0"
+                 MaxLength="300"
+                 VerticalAlignment="Top"
+                 FontSize="20"
+                 FontStyle="Italic"
+                 Foreground="Black"
+                 FontWeight="Medium"
+                 VerticalContentAlignment="Center"
+                 Height="60" Width="372"/>
+        <TextBox HorizontalAlignment="Left"
+                 Text="{Binding TaskID}" 
+                 Margin="262,146,0,0"
+                 VerticalAlignment="Top"
+                 FontSize="20"
+                 FontStyle="Italic"
+                 Foreground="Black"
+                 FontWeight="Medium"
+                 VerticalContentAlignment="Center"
+                 Height="60" Width="380"/>
+        <Label Content="Edit Task" 
+               FontStyle="Italic"
+               Foreground="BlanchedAlmond"
+               FontWeight="Bold"
+               FontSize="30"
+               HorizontalAlignment="Left"
+               Margin="54,279,0,0" 
+               VerticalAlignment="Top" 
+               Height="60" Width="151">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Task ID"
+               FontStyle="Italic"
+               Foreground="BlanchedAlmond"
+               FontWeight="Bold"
+               FontSize="30"
+               HorizontalAlignment="Left"
+               Margin="54,146,0,0"
+               VerticalAlignment="Top"
+               Height="60" Width="124" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Label.Effect>
+        </Label>
+
+        <Button Name="titleButton"
+                Content="Title"
+                Click="Title_Click"
+                FontStyle="Italic"
+                BorderThickness="4"
+                BorderBrush="AntiqueWhite"
+                Foreground="BlanchedAlmond"
+                Background="Transparent"
+                FontWeight="Bold"
+                FontSize="38"
+                HorizontalAlignment="Left"
+                Margin="54,374,0,0"
+                VerticalAlignment="Top" 
+                Width="216">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button Name="descruptionButton"
+                Content="Description"
+                Click="Description_Click"
+                FontStyle="Italic"
+                BorderThickness="4"
+                BorderBrush="AntiqueWhite"
+                Foreground="BlanchedAlmond"
+                Background="Transparent"
+                FontWeight="Bold"
+                FontSize="38"
+                HorizontalAlignment="Left"
+                Margin="360,374,0,0"
+                VerticalAlignment="Top"
+                Width="287">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button Name="duedateButton"
+                Content="DueDate"
+                Click="DueDate_Click"
+                FontStyle="Italic"
+                BorderThickness="4"
+                BorderBrush="AntiqueWhite"
+                Foreground="BlanchedAlmond"
+                Background="Transparent"
+                FontWeight="Bold"
+                FontSize="38"
+                HorizontalAlignment="Left"
+                Margin="730,374,0,0" 
+                VerticalAlignment="Top"
+                Width="240">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button Name="returnButton"
+                Content="Return"
+                FontStyle="Italic"
+                BorderThickness="4"
+                BorderBrush="AntiqueWhite"
+                Foreground="BlanchedAlmond"
+                Background="Transparent"
+                FontWeight="Bold"
+                FontSize="38"
+                Click="return_Click"
+                HorizontalAlignment="Left"
+                Margin="384,456,0,0" 
+                VerticalAlignment="Top"
+                Width="237">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>
